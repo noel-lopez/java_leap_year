@@ -17,4 +17,10 @@ class YearShould {
     public void be_a_leap_year_if_divisible_by_4 (int year) {
         assertTrue(Year.isLeap(year));
     }
+
+    @ParameterizedTest (name = "{0} is a leap year")
+    @ValueSource(ints = {1600, 1200, 800})
+    public void be_a_leap_year_if_divisible_by_400 (int year) {
+        assertTrue(Year.isLeap(year));
+    }
 }
