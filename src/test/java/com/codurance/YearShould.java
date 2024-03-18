@@ -19,4 +19,9 @@ class YearShould {
     public void be_a_leap_year_given_1992() {
         assertTrue(Year.isLeap(1992));
     }
+
+    @Test
+    public void be_a_leap_year_given_1988() {
+        assertTrue(Year.isLeap(1988));
+    }
 }
