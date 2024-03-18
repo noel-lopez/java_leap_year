@@ -2,7 +2,7 @@ package com.codurance;
 
 public class Year {
     public static boolean isLeap(int year) {
-        if (year % 100 == 0 && year % 400 != 0) {
+        if (isDivisibleBy(year, 100) && !isDivisibleBy(year, 400)) {
             return false;
         }
 
