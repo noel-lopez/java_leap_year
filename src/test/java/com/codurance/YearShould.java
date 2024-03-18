@@ -23,4 +23,9 @@ class YearShould {
     public void be_a_leap_year_if_divisible_by_400 (int year) {
         assertTrue(Year.isLeap(year));
     }
+
+    @Test
+    public void not_be_a_leap_year_given_1800 () {
+        assertFalse(Year.isLeap(1800));
+    }
 }
