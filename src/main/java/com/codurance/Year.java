@@ -6,10 +6,10 @@ public class Year {
             return false;
         }
 
-        if (year % 4 == 0) {
-            return true;
-        }
+        return isDivisibleBy(year, 4);
+    }
 
-        return false;
+    private static boolean isDivisibleBy(int year, int number) {
+        return year % number == 0;
     }
 }
