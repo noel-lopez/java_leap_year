@@ -1,7 +1,7 @@
 package com.codurance;
 
 public class Year {
-    public static boolean isLeap(int i) {
+    public static boolean isLeap(int year) {
         return false;
     }
 }
