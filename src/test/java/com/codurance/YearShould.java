@@ -24,18 +24,9 @@ class YearShould {
         assertTrue(Year.isLeap(year));
     }
 
-    @Test
-    public void not_be_a_leap_year_given_1800 () {
-        assertFalse(Year.isLeap(1800));
-    }
-
-    @Test
-    public void not_be_a_leap_year_given_1900 () {
-        assertFalse(Year.isLeap(1900));
-    }
-
-    @Test
-    public void not_be_a_leap_year_given_2100 () {
-        assertFalse(Year.isLeap(2100));
+    @ParameterizedTest
+    @ValueSource(ints = {1800, 1900, 2100})
+    public void not_be_a_leap_year_if_divisible_by_4_and_100_but_not_by_400(int year) {
+        assertFalse(Year.isLeap(year));
     }
 }
